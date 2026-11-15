@@ -67,7 +67,8 @@ lab-equipment-loan/
 │   ├── prd.md
 │   ├── architecture.md
 │   ├── tasks.md
-│   └── code_review_log.md
+│   ├── code_review_log.md
+│   └── README.md
 ├── run.py
 └── requirements.txt
 Struktur ini merupakan usulan pemisahan kode. Implementasi boleh disesuaikan selama tanggung jawab dan alur bisnis tetap terjaga.
