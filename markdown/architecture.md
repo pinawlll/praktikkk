@@ -62,13 +62,14 @@ lab-equipment-loan/
 ├── tests/
 │   ├── test_items.py
 │   └── test_loans.py
+├── markdown/
+│   ├── requirement.md
+│   ├── prd.md
+│   ├── architecture.md
+│   ├── tasks.md
+│   └── code_review_log.md
 ├── run.py
-├── requirements.txt
-├── requirement.md
-├── prd.md
-├── architecture.md
-├── tasks.md
-└── code_review.md
+└── requirements.txt
 Struktur ini merupakan usulan pemisahan kode. Implementasi boleh disesuaikan selama tanggung jawab dan alur bisnis tetap terjaga.
 5. Model Data
 5.1 Item
