@@ -68,14 +68,14 @@
 
 ## 5. API Routes
 
-- [ ] Implementasikan `GET /items`.
-- [ ] Implementasikan `POST /items`.
-- [ ] Implementasikan `POST /loans`.
-- [ ] Implementasikan `PUT /loans/{id}/return`.
-- [ ] Implementasikan `GET /loans/student/{student_id}`.
-- [ ] Pastikan seluruh endpoint menerima atau mengembalikan JSON sesuai kebutuhan.
-- [ ] Pastikan HTTP status code sesuai acceptance criteria.
-- [ ] Gunakan format respons sukses dan error yang konsisten.
+- [x] Implementasikan `GET /items`.
+- [x] Implementasikan `POST /items`.
+- [x] Implementasikan `POST /loans`.
+- [x] Implementasikan `PUT /loans/{id}/return`.
+- [x] Implementasikan `GET /loans/student/{student_id}`.
+- [x] Pastikan seluruh endpoint menerima atau mengembalikan JSON sesuai kebutuhan.
+- [x] Pastikan HTTP status code sesuai acceptance criteria.
+- [x] Gunakan format respons sukses dan error yang konsisten.
 
 ## 6. Testing
 
