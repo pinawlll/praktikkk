@@ -28,13 +28,23 @@ def get_by_id(loan_id, db=None):
     return dict(row) if row is not None else None
 
 
-def update_status(loan_id, status, db=None):
-    """Change the status of a loan and return ``True`` when it was updated."""
+def update_status(loan_id, status, expected_status=None, db=None):
+    """Change the status of a loan and return ``True`` when it was updated.
+
+    When ``expected_status`` is given, the update only applies if the loan is
+    currently in that status, which keeps repeated operations safe.
+    """
     db = db or get_db()
-    cursor = db.execute(
-        "UPDATE loan SET status = ? WHERE id = ?",
-        (status, loan_id),
-    )
+    if expected_status is None:
+        cursor = db.execute(
+            "UPDATE loan SET status = ? WHERE id = ?",
+            (status, loan_id),
+        )
+    else:
+        cursor = db.execute(
+            "UPDATE loan SET status = ? WHERE id = ? AND status = ?",
+            (status, loan_id, expected_status),
+        )
     return cursor.rowcount == 1
 
 
