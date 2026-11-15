@@ -4,6 +4,8 @@ import os
 
 from flask import Flask
 
+from . import database
+
 
 def create_app(test_config=None):
     """Create and configure a Flask application instance."""
@@ -20,5 +22,7 @@ def create_app(test_config=None):
 
     # Ensure the instance folder exists before the database file is created.
     os.makedirs(app.instance_path, exist_ok=True)
+
+    database.init_app(app)
 
     return app
